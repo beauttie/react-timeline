@@ -5,9 +5,12 @@ import TimelineEvent from './TimelineEvent';
 const Timeline = (props) => {
   const timelineComponents = props.events.map((event, i) => {
     return (
-      <li key={i}>
-        <TimelineEvent person={event.person} status={event.status} timeStamp={event.timeStamp} />
-      </li>
+      <TimelineEvent 
+        key={i} 
+        person={event.person} 
+        status={event.status} 
+        timeStamp={event.timeStamp} 
+      />
     );
   });
 
